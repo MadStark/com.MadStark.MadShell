@@ -1,0 +1,30 @@
+{
+    "name": "com.madstark.madshell",
+    "displayName": "MadStark's Shell",
+    "version": "0.0.2",
+    "unity": "2019.3",
+    "description": "Runtime shell that helps debugging stuff and allows to easily define and register commands.",
+    "keywords": [
+        "command",
+        "console",
+        "debug",
+        "dev",
+        "tool"
+    ],
+    "dependencies": {
+        "com.unity.textmeshpro": "3.0.6"
+    },
+    "author": {
+        "name": "MadStark",
+        "url": "https://twitter.com/MadreDeDios77"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MadStark/com.MadStark.MadShell.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MadStark/com.MadStark.MadShell/issues"
+    },
+    "homepage": "https://github.com/MadStark/com.MadStark.MadShell#readme"
+}

@@ -1,20 +1,14 @@
-using MadStark.RuntimeConsole;
+using MadStark.MadShell;
 using UnityEngine;
 
 public class TestSpawner : MonoBehaviour
 {
-    [RuntimeInitializeOnLoadMethod]
-    private static void RegisterCommands()
-    {
-        Console.RegisterCommandsInType(typeof(TestSpawner));
-    }
-
-    [ConsoleCommand("spawn")]
+    [Command("spawn")]
     private static void SpawnFromCommand(string[] args)
     {
         if (args.Length < 1)
         {
-            Console.LogError("Usage: /spawn <name> [count]");
+            Debug.Log("Usage: spawn <name> [count]");
             return;
         }
 
@@ -23,8 +17,7 @@ public class TestSpawner : MonoBehaviour
 
         if (go == null)
         {
-            //TODO: Log on runtime console
-            Console.LogError($"Object '{name}' not found in Resources folder.");
+            Debug.LogError($"Object '{name}' not found in Resources folder.");
             return;
         }
 

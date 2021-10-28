@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace MadStark.RuntimeConsole
+namespace MadStark.MadShell
 {
-    [DefaultExecutionOrder(-1000)]
-    public class DefaultConsoleInputs : MonoBehaviour
+    [DefaultExecutionOrder(-100)]
+    public class ConsoleInputs : MonoBehaviour
     {
         [SerializeField] private ConsoleBehaviour console;
         [SerializeField] private KeyCode toggleKey = KeyCode.Tilde;
-        [SerializeField] private KeyCode commandShortcut = KeyCode.Slash;
 
 
         private void Awake()
@@ -24,11 +23,6 @@ namespace MadStark.RuntimeConsole
                     console.Hide();
                 else
                     console.ShowAndFocus();
-            }
-            else if (Input.GetKeyDown(commandShortcut) && !console.Focused)
-            {
-                console.ShowAndFocus();
-                console.Text = Console.kCommandPrefix.ToString();
             }
         }
 

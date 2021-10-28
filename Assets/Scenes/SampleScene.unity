@@ -565,6 +565,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Runtime Console
       objectReference: {fileID: 0}
+    - target: {fileID: 4753743031185758054, guid: 41875ce3ff982dc4d84a4c385df2db29, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753743031185758054, guid: 41875ce3ff982dc4d84a4c385df2db29, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753743031185758054, guid: 41875ce3ff982dc4d84a4c385df2db29, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753743031298715536, guid: 41875ce3ff982dc4d84a4c385df2db29, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
