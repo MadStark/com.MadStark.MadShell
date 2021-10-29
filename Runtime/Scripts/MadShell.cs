@@ -98,9 +98,6 @@ namespace MadStark.MadShell
 			callback.Invoke(args);
 		}
 
-
-		#region Command Registration
-
 		/// <summary>
 		/// Register a command.
 		/// </summary>
@@ -169,7 +166,5 @@ namespace MadStark.MadShell
 				}
 			}
 		}
-
-		#endregion
 	}
 }

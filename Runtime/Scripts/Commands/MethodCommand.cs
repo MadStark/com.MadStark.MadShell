@@ -12,12 +12,12 @@ namespace MadStark.MadShell
 		/// <summary>
 		/// Method that will get invoked by this command.
 		/// </summary>
-		public MethodInfo Method { get; }
+		public readonly MethodInfo method;
 
 
 		internal MethodCommand(MethodInfo methodInfo)
 		{
-			Method = methodInfo;
+			method = methodInfo;
 		}
 
 		/// <summary>
@@ -46,14 +46,11 @@ namespace MadStark.MadShell
 			return parameters.Length == 0 || parameters.Length == 1 && parameters[0].ParameterType == typeof(string[]);
 		}
 
-		/// <summary>
-		/// Invoke this command.
-		/// </summary>
-		/// <param name="args">Command arguments.</param>
+		/// <inheritdoc />
 		public override void Invoke(string[] args)
 		{
-			object[] parameters = Method.GetParameters().Length == 0 ? null : new object[] { args };
-			Method.Invoke(null, BindingFlags.Static, null, parameters, CultureInfo.CurrentCulture);
+			object[] parameters = method.GetParameters().Length == 0 ? null : new object[] { args };
+			method.Invoke(null, BindingFlags.Static, null, parameters, CultureInfo.CurrentCulture);
 		}
 	}
 }

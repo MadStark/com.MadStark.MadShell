@@ -5,6 +5,7 @@ using UnityEditor;
 
 namespace MadStark.MadShell
 {
+#if !MADSHELL_DISABLE_AUTO_LOADER
 	/// <summary>
 	/// Automatically calls <see cref="MadShell.FindAndRegisterAllCommands"/> when entering play mode
 	/// or in Editor after script compilation if Reload Domain is false.
@@ -24,7 +25,6 @@ namespace MadStark.MadShell
 			}
 		}
 
-#if !MADSHELL_DISABLE_AUTO_LOADER
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 		private static void InitializeOnLoad()
 		{
@@ -48,6 +48,6 @@ namespace MadStark.MadShell
 		}
 #endif // UNITY_EDITOR && UNITY_2019_3_OR_NEWER
 
-#endif // MADSHELL_DISABLE_AUTO_LOADER
 	}
+#endif // MADSHELL_DISABLE_AUTO_LOADER
 }

@@ -5,6 +5,10 @@ namespace MadStark.MadShell
 	/// </summary>
 	public abstract class Command
 	{
+		/// <summary>
+		/// Invoke this command.
+		/// </summary>
+		/// <param name="args">Command arguments.</param>
 		public abstract void Invoke(string[] args);
 	}
 }
