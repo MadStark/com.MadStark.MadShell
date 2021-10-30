@@ -1,7 +1,7 @@
 {
     "name": "com.madstark.madshell",
     "displayName": "MadStark's Shell",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "unity": "2019.3",
     "description": "Runtime shell that helps debugging stuff and allows to easily define and register commands.",
     "keywords": [
@@ -26,5 +26,8 @@
     "bugs": {
         "url": "https://github.com/MadStark/com.MadStark.MadShell/issues"
     },
-    "homepage": "https://github.com/MadStark/com.MadStark.MadShell#readme"
+    "homepage": "https://github.com/MadStark/com.MadStark.MadShell#readme",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/@MadStark"
+    }
 }
